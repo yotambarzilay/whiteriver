@@ -481,6 +481,10 @@ button {
 	}
 
 	section#contact {
+		.content {
+			max-width: auto;
+		}
+
 		form {
 			width: auto;
 			max-width: 460px;

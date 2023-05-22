@@ -425,6 +425,9 @@ button.block {
   header button svg {
     height: 20px;
   }
+  section#contact .content {
+    max-width: auto;
+  }
   section#contact form {
     width: auto;
     max-width: 460px;
