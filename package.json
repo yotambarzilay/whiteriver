@@ -1,0 +1,24 @@
+{
+	"name": "whiteriver",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npm run build -- --watch",
+		"build": "sass ./src/main.scss ./src/main.css",
+		"serve": "npx serve \"./src\" -l 80 -C -d"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yotambarzilay/whiteriver.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yotambarzilay/whiteriver/issues"
+	},
+	"homepage": "https://github.com/yotambarzilay/whiteriver#readme",
+	"devDependencies": {
+		"sass": "^1.62.1"
+	}
+}

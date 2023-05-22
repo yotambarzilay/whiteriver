@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon shortcut" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>White River Consulting</title>
+		<meta name="description" content="" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="main.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="dark">
+			<a href="/" class="logo"><img src="logo-no-background.png" alt="White River Consulting" /></a>
+			<div class="nav-wrapper">
+				<nav class="hidden-in-mobile">
+					<a href="#about">About</a>
+					<a href="#how-it-works">How it works?</a>
+					<a href="#getting-started">Getting Started</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="dark hero">
+				<div class="content centered">
+					<h1>WHITE RIVER CONSULTING</h1>
+					<div class="subtitle">YOUR BUSINESS PARTNER FOR SUCCESS</div>
+					<h3>Take your engineering to the next level</h3>
+				</div>
+			</section>
+
+			<section id="about" class="dark">
+				<div class="content large">
+					<h2>A little about us</h2>
+
+					<p>
+						Our consulting company provides expert advice and guidance to clients, solving complex problems
+						and helping them achieve their objectives.
+					</p>
+				</div>
+				<svg class="circle right large hidden-in-mobile" viewBox="0 0 100 100">
+					<circle cx="0" cy="50%" r="48%" fill="currentColor" />
+				</svg>
+				<div></div>
+			</section>
+
+			<section id="how-it-works">
+				<div class="content">
+					<h2>How it works?</h2>
+
+					<p>
+						We work closely with clients to understand their unique needs and tailor solutions that align
+						with their goals.
+					</p>
+				</div>
+			</section>
+
+			<section id="getting-started">
+				<div class="content">
+					<h2>Getting started</h2>
+
+					<p>
+						Our experienced consultants are dedicated to delivering innovative and practical solutions that
+						drive measurable results.
+					</p>
+				</div>
+				<svg class="circle left hidden-in-mobile" viewBox="0 0 100 100">
+					<circle cx="0" cy="50%" r="48%" fill="currentColor" />
+				</svg>
+			</section>
+
+			<section id="contact" class="dark">
+				<div class="content">
+					<h2>Contact us</h2>
+
+					<form id="contact-form" action="https://formbold.com/s/9XxLe" method="POST">
+						<input type="text" name="name" placeholder="Name" required />
+						<input type="text" name="company" placeholder="Company" required />
+						<input
+							type="email"
+							name="email"
+							placeholder="email"
+							pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+							title="Please enter a valid email address"
+							required
+						/>
+						<div class="textarea-wrapper">
+							<textarea
+								name="message"
+								placeholder="Message"
+								maxlength="1000"
+								required
+								onInput="this.parentNode.dataset.replicatedValue = this.value"
+							></textarea>
+						</div>
+						<button type="submit" class="large">Send</button>
+						<div class="form-message hidden">Message sent successfuly</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="content">
+				<div>
+					<a href="/" class="logo"> <img src="logo-no-background.png" alt="White River Consulting" /></a>
+					<span class="copyright">
+						Copyright
+						<script>
+							document.write(new Date().getFullYear())
+						</script>
+						All Rights Reserved.
+					</span>
+				</div>
+				<nav>
+					<a href="#about">About</a>
+					<a href="#how-it-works">How it works?</a>
+					<a href="#getting-started">Getting Started</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</footer>
+		<script>
+			var form = document.getElementById('contact-form')
+			form.addEventListener('submit', (e) => {
+				e.preventDefault()
+				var data = new URLSearchParams(new FormData(form))
+
+				var btn = form.querySelector('button')
+				var formMessage = form.querySelector('.form-message')
+
+				btn.innerHTML = 'Sending...'
+				btn.disabled = true
+
+				fetch('https://formbold.com/s/3Vpn0', {
+					method: 'POST',
+					body: data,
+				})
+					.then((r) => {
+						r.text().then(console.log)
+						btn.classList.add('sent')
+						btn.innerHTML = '&check; Sent'
+						formMessage.innerHTML = 'Message sent successfuly'
+					})
+					.catch((r) => {
+						btn.disabled = false
+						btn.innerHTML = 'Send'
+						formMessage.innerHTML = 'Error sending message, please try again later'
+					})
+					.finally(() => {
+						formMessage.classList.remove('hidden')
+					})
+			})
+		</script>
+	</body>
+</html>

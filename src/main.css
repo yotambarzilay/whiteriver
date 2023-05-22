@@ -1,0 +1,591 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.logo > img {
+  height: 100%;
+}
+
+.logo {
+  font-family: "Cardo", serif;
+}
+
+:root {
+  --gray-light: #f2f2f2;
+  --gray-dark: #191919;
+  --accent-color: #fb7f1a;
+  --background-color: #fffff;
+  --color: var(--gray-dark);
+  --heading-color: var(--accent-color);
+}
+
+.dark {
+  --background-color: var(--gray-dark);
+  --color: #ffffff;
+  --heading-color: var(--color);
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 26px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: var(--color);
+  background: var(--background-color);
+  font-family: Montserrat;
+}
+
+header {
+  height: 76px;
+  padding-inline: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gray-dark);
+  color: #ffffff;
+}
+header .nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+header nav {
+  display: inline-block;
+}
+header .logo {
+  height: 27px;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.66px;
+  margin-right: 40px;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
+section {
+  background: var(--background-color);
+  color: var(--color);
+  padding-block: 8rem;
+  padding-inline: 180px;
+  color: var(--color);
+  font-size: 1rem;
+  line-height: 1.23rem;
+  letter-spacing: 0.78px;
+  position: relative;
+}
+
+.content {
+  max-width: 1190px;
+}
+
+h1 {
+  font-size: 2.38rem;
+  line-height: 2.92rem;
+  letter-spacing: 1.86px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 75px;
+}
+
+.subtitle {
+  font-size: 1.42rem;
+  line-height: 1.73rem;
+  letter-spacing: 1.11px;
+  margin-bottom: 75px;
+}
+
+h2 {
+  color: var(--heading-color);
+  font-size: 3.08rem;
+  line-height: 3.73rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 26px;
+}
+
+h3 {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+p:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+li:before {
+  content: "⋅";
+  display: inline-block;
+  font-size: 1.5rem;
+  position: relative;
+  top: 0.1rem;
+  margin-right: 0.15rem;
+}
+
+footer {
+  background: var(--gray-light);
+  padding-block: 68px 50px;
+  padding-inline: 180px;
+}
+footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .logo {
+  height: 18px;
+  display: block;
+  margin-bottom: 12px;
+}
+footer .copyright {
+  font-size: 14px;
+}
+footer nav {
+  display: grid;
+  column-count: 1;
+}
+footer nav a {
+  text-decoration: none;
+  color: var(--gray-dark);
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+section.hero {
+  min-height: calc(var(--100vh, 100vh) - 76px);
+  padding-block: 100px;
+  padding-inline: 0;
+  display: flex;
+  align-items: center;
+  background-image: url("jack-anstey-HtUBBdNDxpQ-unsplash.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.hero .content {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+section#about {
+  font-size: 1.08rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.84px;
+}
+section#about h3 {
+  text-transform: uppercase;
+}
+
+section#getting-started {
+  background: var(--gray-light);
+  padding-left: 14rem;
+}
+
+section#contact h2 {
+  font-size: 3rem;
+}
+section#contact .content {
+  text-align: center;
+}
+section#contact form {
+  text-align: left;
+  width: 730px;
+  margin-inline: auto;
+}
+section#contact input,
+section#contact textarea {
+  width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  font-family: Montserrat;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+  padding-inline: 38px;
+  background: transparent;
+  color: var(--color);
+}
+section#contact input::placeholder,
+section#contact textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #777777;
+  opacity: 1; /* Firefox */
+}
+section#contact input {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+section#contact .textarea-wrapper {
+  display: grid;
+}
+section#contact .textarea-wrapper::after {
+  content: attr(data-replicated-value) " ";
+  width: 100%;
+  border: 1px solid #ffffff;
+  font-family: Montserrat;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+  padding-inline: 38px;
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+section#contact .textarea-wrapper textarea {
+  resize: none;
+  overflow: hidden;
+}
+section#contact .textarea-wrapper textarea, section#contact .textarea-wrapper::after {
+  grid-area: 1/1/2/2;
+  padding-block: 24px;
+  min-height: 160px;
+}
+section#contact button {
+  margin-top: 30px;
+  height: 80px;
+  border-radius: 40px;
+  display: block;
+  margin-left: auto;
+  width: 240px;
+  font-weight: 700;
+}
+section#contact button:disabled {
+  background: #777777;
+}
+section#contact button.sent {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+section#contact .form-message {
+  font: normal normal normal 16px/19px Montserrat;
+  letter-spacing: 0.48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 16px;
+  text-align: right;
+}
+section#contact .form-message.hidden {
+  visibility: hidden;
+}
+
+button {
+  height: 46px;
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 23px;
+  padding-inline: 16px;
+  font-family: Montserrat;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  font-weight: 900;
+  cursor: pointer;
+}
+button svg {
+  height: 22px;
+  margin-right: 8px;
+}
+button div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+button.large {
+  height: 3rem;
+  border-radius: 1.5rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.9px;
+  padding-inline: 1.15rem;
+}
+button.large svg {
+  height: 1.7rem;
+}
+button.block {
+  display: block;
+  border-radius: 50%;
+  font-size: 25px;
+  width: 200px;
+  height: 200px;
+  letter-spacing: 0.75px;
+}
+
+.circle {
+  position: absolute;
+  pointer-events: none;
+  color: var(--accent-color);
+  bottom: -6rem;
+  height: 12rem;
+  z-index: 1;
+}
+.circle.large {
+  bottom: -10rem;
+  height: 20rem;
+}
+.circle.left {
+  left: 0;
+}
+.circle.right {
+  transform: rotate(180deg);
+  right: 0;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 20px;
+  }
+  header {
+    padding-inline: 4rem;
+  }
+  header a {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  section {
+    padding-inline: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    padding-inline: 30px;
+  }
+  header .logo {
+    height: 24px;
+  }
+  section {
+    padding-inline: 80px;
+  }
+  footer {
+    padding-inline: 80px;
+  }
+}
+@media (max-width: 1060px) {
+  section#getting-started {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 16px;
+  }
+  header .logo {
+    height: 20px;
+  }
+  header a {
+    font-size: 14px;
+    margin-right: 16px;
+  }
+  header button {
+    height: 40px;
+    font-size: 14px;
+    padding-inline: 14px;
+  }
+  header button svg {
+    height: 20px;
+  }
+  section#contact form {
+    width: auto;
+    max-width: 460px;
+  }
+  section#contact input,
+  section#contact textarea {
+    font-size: 20px;
+    line-height: 24px;
+    padding-inline: 26px;
+    border-radius: 25px;
+  }
+  section#contact input {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  section#contact .textarea-wrapper::after {
+    font-size: 20px;
+    line-height: 24px;
+    padding-inline: 26px;
+  }
+  section#contact .textarea-wrapper textarea, section#contact .textarea-wrapper::after {
+    grid-area: 1/1/2/2;
+    padding-block: 24px;
+    min-height: 100px;
+  }
+  section#contact button {
+    margin-top: 24px;
+    height: 50px;
+    border-radius: 25px;
+    width: 150px;
+  }
+  section#contact .form-message {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  footer {
+    padding-inline: 30px;
+  }
+  footer .wemabi-logo {
+    height: 22px;
+  }
+  footer .copyright {
+    font-size: 12px;
+  }
+  footer nav {
+    column-count: 1;
+  }
+  footer nav a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 840px) {
+  html {
+    font-size: 16px;
+  }
+  header nav a {
+    margin-right: 14px;
+  }
+}
+@media (max-width: 760px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* mobile */
+@media (max-width: 730px) {
+  html {
+    font-size: 14px;
+  }
+  .hidden-in-mobile {
+    display: none;
+  }
+  header {
+    padding-inline: 20px;
+  }
+  header button {
+    height: 30px;
+    border-radius: 15px;
+    padding-inline: 12px;
+    font-weight: 700;
+  }
+  button.block {
+    font-size: 18px;
+    width: 146px;
+    height: 146px;
+  }
+  section,
+  footer {
+    padding-block: 36px;
+    padding-inline: 40px !important;
+  }
+  section {
+    text-align: center;
+  }
+  ul {
+    text-align: left;
+  }
+  h1,
+  h2 {
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 2px;
+  }
+  h1 {
+    margin-bottom: 60px;
+  }
+  .subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 60px;
+  }
+  h2 {
+    margin-bottom: 14px;
+  }
+  h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  section#contact input,
+  section#contact textarea {
+    font-size: 12px;
+    line-height: 14px;
+    padding-inline: 16px;
+    border-radius: 18px;
+  }
+  section#contact input {
+    height: 36px;
+    margin-bottom: 16px;
+  }
+  section#contact .textarea-wrapper::after {
+    font-size: 12px;
+    line-height: 14px;
+    padding-inline: 16px;
+  }
+  section#contact .textarea-wrapper textarea, section#contact .textarea-wrapper::after {
+    padding-block: 16px;
+    min-height: 72px;
+  }
+  section#contact button {
+    margin-top: 16px;
+    height: 36px;
+    border-radius: 18px;
+    width: 108px;
+  }
+  section#contact .form-message {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  footer .content {
+    flex-direction: column;
+  }
+  footer nav {
+    margin-top: 30px;
+    column-count: 1;
+  }
+  footer nav a {
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
